@@ -24,9 +24,9 @@ public interface IUserRepo extends CrudRepository<Users,Integer> {
     public List<Users> findByNameOrAgeGreaterThan(String name,Integer age);
     @Query(value = "select * from Users order by user_age asc",nativeQuery = true)
     public List<Users> findUserOrderByAgeASC();
-
+//query statement
     @Query(value = "select * from Users where  user_age= :age",nativeQuery = true)
-    public List<Users> findUserOrderByAgeASCWithWhere(Integer age);
+    public List<Users> findUserOrderByAgeASCWithWhereever(Integer age);
 
     //if we are using @Query we can keep method name anything
 }

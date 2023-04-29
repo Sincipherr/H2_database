@@ -48,6 +48,6 @@ public class UserService {
 
     public List<Users> queryuser(String age) {
         Integer userage=Integer.parseInt(age);
-        return ur.findUserOrderByAgeASCWithWhere(userage);
+        return ur.findUserOrderByAgeASCWithWhereever(userage);
     }
 }
