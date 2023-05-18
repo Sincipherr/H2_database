@@ -18,6 +18,11 @@ public class UserController {
         return us.getusers();
     }
 
+    @GetMapping(value = "/home")
+    public String home(){
+        return "Hello world";
+    }
+
     @GetMapping(value = "/users/{name}")
     public List<Users> getuserbyname(@PathVariable String name){
         return us.getuserbyname(name);
