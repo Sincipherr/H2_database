@@ -22,10 +22,12 @@ public class UserController {
     public List<Users> getuserbyname(@PathVariable String name){
         return us.getuserbyname(name);
     }
+
     @GetMapping(value = "/userage/{age}")
     public List<Users> getuserbyage(@PathVariable String age){
         return us.getuserbyage(age);
     }
+
     @GetMapping(value = "/usernameage/{name}/{age}")
     public List<Users> getuserbynameage(@PathVariable String name,@PathVariable String age){
         return us.getuserbynameage(name,age);
@@ -34,14 +36,17 @@ public class UserController {
     public List<Users> sortuser(){
         return us.sortasc();
     }
+
     @GetMapping(value = "/userquery/{age}")
     public List<Users> query(@PathVariable String age){
         return us.queryuser(age);
     }
+
     @PostMapping(value = "/addusers")
     public String adduser(@RequestBody List<Users> userList){
         return us.addusers(userList);
     }
+
 
     @DeleteMapping(value = "/user/{id}")
     public void deleteUser(@PathVariable Integer id){
