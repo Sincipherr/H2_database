@@ -26,7 +26,7 @@ public class UserController {
         return "Hello world";
     }
 
-    @GetMapping("/home")
+    @GetMapping("/home1")
     public Map<String,String> home1(){
         Map<String,String> map = new HashMap<>();
         map.put("Prahsanth","Hello home");
