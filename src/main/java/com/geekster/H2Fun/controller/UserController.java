@@ -6,7 +6,9 @@ import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class UserController {
@@ -24,6 +26,12 @@ public class UserController {
         return "Hello world";
     }
 
+    @GetMapping("/home")
+    public Map<String,String> home1(){
+        Map<String,String> map = new HashMap<>();
+        map.put("Prahsanth","Hello home");
+        return map;
+    }
     @GetMapping(value = "/users/{name}")
     public List<Users> getuserbyname(@PathVariable String name){
         return us.getuserbyname(name);
