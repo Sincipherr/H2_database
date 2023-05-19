@@ -23,7 +23,7 @@ public class UserController {
     @GetMapping(value = "/home")
     public String home(){
         System.out.println("Hello world");
-        return "Hello world";
+        return "Hello Hello World";
     }
 
     @GetMapping("/home1")
